@@ -6,9 +6,9 @@ const MyMapComponent = compose(
     withProps({
       // googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
       googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-LLjEHUXavG3WqTGUB-DpXpEvh-eRhI&v=3.exp&libraries=geometry,drawing,places",
-      loadingElement: <div style={{ height: `100%` }} />,
+      loadingElement: <div style={{ height: `200%` }} />,
       containerElement: <div style={{ height: `400px` }} />,
-      mapElement: <div style={{ height: `100%` }} />,
+      mapElement: <div style={{ height: `200%` }} />,
     }),
     withScriptjs,
     withGoogleMap
@@ -91,10 +91,10 @@ const MyMapComponent = compose(
   };
 
       return(
-          <>
+          <div style={{}}>
             <GoogleMap
-                defaultZoom={12}
-                defaultCenter={{ lat: 28.51835, lng : 77.200075 }}
+                defaultZoom={13}
+                defaultCenter={{ lat: 28.58835, lng : 77.200075 }}
                 >
                 {points.map((map, index) => {
                     console.log(map);
@@ -111,8 +111,7 @@ const MyMapComponent = compose(
                     </Marker>;
                 })}
             </GoogleMap>
-            <div>{location}</div>
-        </>
+        </div>
         )
     }
   )
