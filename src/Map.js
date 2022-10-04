@@ -109,7 +109,7 @@ const MyMapComponent = compose(
           <div style={{}}>
             <GoogleMap
                 defaultZoom={13}
-                defaultCenter={{ lat: 28.58835, lng : 77.200075 }}
+                defaultCenter={{ lat: 28.55135, lng : 77.200075 }}
                 >
                 {Electriva.map((map, index) => {
                     console.log(map);
