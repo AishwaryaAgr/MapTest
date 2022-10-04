@@ -74,7 +74,9 @@ const MyMapComponent = compose(
       ]
     
       let others = [
-        {"place": "J Block Private", "lat": 28.5198354, "lng" : 77.2155743}
+        {"place": "J Block", "lat": 28.5198354, "lng" : 77.2155743},
+        {"place": "Malviya nagar-Inderpal singh", "lat": 28.535772, "lng": 77.209421},
+        {"place": "Malviya nagar corner market", "lat": 28.538198, "lng": 77.215145}
       ]
 
 	useEffect(() => {
@@ -153,7 +155,7 @@ const MyMapComponent = compose(
                         location ==  `Others${index}` ? 
                       <InfoWindow>
                         <div>
-                          {map.place}
+                          Private: {map.place}
                         </div>
                       </InfoWindow>
                     : null }
