@@ -119,7 +119,7 @@ const MyMapComponent = compose(
                       
                       <InfoWindow>
                         <div>
-                          {map.place}
+                          Electriva: {map.place}
                         </div>
                       </InfoWindow>
                     : null }
@@ -136,7 +136,7 @@ const MyMapComponent = compose(
                         location ==  `Becil${index}` ? 
                       <InfoWindow>
                         <div>
-                          {map.place}
+                          BECIL: {map.place}
                         </div>
                       </InfoWindow>
                     : null }
