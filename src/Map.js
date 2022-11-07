@@ -115,7 +115,10 @@ const MyMapComponent = compose(
                 >
                 {Electriva.map((map, index) => {
                     console.log(map);
-                    return <Marker onClick={()=>setLocation("Electriva"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(35, 40),
+                      // origin: new window.google.maps.Point(0, 0),
+                      // anchor: new window.google.maps.Point(32,65),
+                      labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Electriva"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
                       {
                         location ==  `Electriva${index}` ? 
                       
