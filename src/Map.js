@@ -20,6 +20,7 @@ const MyMapComponent = compose(
     const [liveMarkers, setLiveMarkers] = useState([])
     const [location, setLocation] = useState()
     
+    
 
     const Electriva = [
       // {"place": "MAYA PURI TOWARDS PUNJABI BAGH",	"lat":"28.637729	","lng":"77.129314"},
@@ -27,20 +28,16 @@ const MyMapComponent = compose(
       // {"place": "PUNJABI BAGH WEST TOWARDS DND",	"lat":"28.669927	","lng":"77.138067"},
       // {"place": "MAYA PURI TOWARDS DND",	"lat":"28.639195	","lng":"77.129721"},
       // {"place": "Nehrunagar Facing DND",	"lat":"28.569325	","lng":"77.253845"},
-      // {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
       // {"place": "Andrews Ganj facing DND",	"lat":"28.566473	","lng":"77.229749"},
       // {"place": "South Extension facing DND",	"lat":"28.56906	","lng":"77.21956"},
       // {"place": "Nehrunagar facing Dhaula Kuan ",	"lat":"28.568045	","lng":"77.259835"},
-      // {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
       // {"place": "Andrews Ganj facing Dhaula Kuan ",	"lat":"28.56599	","lng":"77.229396"},
       {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
       // {"place": "Bhikaji Kama Place facing Dhaula Kuan (Metro)",	"lat":"28.569184	","lng":"77.188833"},
       // {"place": "Moti Bag facing Dhaula Kuan",	"lat":"28.570927	","lng":"77.18253"},
       // {"place": "Dhaula Kuan/South Campus facing Dhaula kuan",	"lat":"28.590921	","lng":"77.168314"},
       // {"place": "Modi Mill okhla facing Modi mill flyover ",	"lat":"28.551784	","lng":"77.264126"},
-      // {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"},
       // {"place": "Near IIT facing modi mill fly over ",	"lat":"28.548898	","lng":"77.188389"},
-      // {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"},
       // {"place": "Malai Mandir facing modi Mill flyover ",	"lat":"28.566207	","lng":"77.166294"},
       // {"place": "Modi Mill okhla facing R R Hospital ",	"lat":"28.548706	","lng":"77.259259"},
       // {"place": "Nehru place facing R R Hospital",	"lat":"28.547711	","lng":"77.254095"},
@@ -50,7 +47,6 @@ const MyMapComponent = compose(
       {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
       // {"place": "Soami Nagar facing modi mill flyover",	"lat":"28.542222	","lng":"77.227342"},
       // {"place": "Panchsheel facing modi mill flyover ",	"lat":"28.542616	","lng":"77.221787"},
-      // {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"},
       // {"place": "Safdarjung facing DND",	"lat":"28.570345	","lng":"77.202277"},
       // {"place": "Raj Nagar facing DND",	"lat":"28.570009	","lng":"77.202032"},
       // {"place": "Safdarjung facing Dhaula Kuan",	"lat":"28.569084	","lng":"77.204264"},
@@ -64,19 +60,33 @@ const MyMapComponent = compose(
       // {"place": "RAJOURI GARDEN TOWARDS PUNJABI BAGH",	"lat":"28.64389	","lng":"77.127124"}
     ]
     let Becil = [
-      // {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
+      {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
       // {"place" : "Kamal cinema", "lat" : 	28.56526997485881, "lng" : 77.19891103529604},
       // {"place" : "Sapna Cinema ", "lat" : 	28.559510375909124, "lng" : 77.24640092566388},
-      // {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386},
+      // Ravindra Dhaba 28.56564359652041, 77.19932942691037 --
       // {"place" : "PVR Priya ", "lat" : 	28.557540582731658, "lng" : 77.16451842566383},
       // {"place" : "Green Park (Chawla)", "lat" : 	28.560193, "lng" : 77.207305},
-      // {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044}
+      {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044},
+      {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678}
       ]
     
       let others = [
         // {"place": "J Block", "lat": 28.5198354, "lng" : 77.2155743},
         // {"place": "Malviya nagar-Inderpal singh", "lat": 28.535772, "lng": 77.209421},
-        // {"place": "Malviya nagar corner market", "lat": 28.538198, "lng": 77.215145}
+        // {"place": "Malviya nagar corner market", "lat": 28.538198, "lng": 77.215145},
+        {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
+        {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
+        {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
+        {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
+        {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
+        {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
+      {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
+      {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
+      {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
+      {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
+      {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
+      
+        
       ]
 
 	useEffect(() => {
@@ -132,7 +142,7 @@ const MyMapComponent = compose(
                 })}
                 {Becil.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(60, 60),
+                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(35, 40),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
@@ -149,7 +159,7 @@ const MyMapComponent = compose(
                 })}
                 {others.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(35, 40),
+                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(60, 60),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Others"+index)}  position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
@@ -158,7 +168,7 @@ const MyMapComponent = compose(
                         location ==  `Others${index}` ? 
                       <InfoWindow>
                         <div>
-                          Private: {map.place}
+                           {map.place}
                         </div>
                       </InfoWindow>
                     : null }
