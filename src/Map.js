@@ -2,7 +2,8 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker , InfoWindow} from "reac
 import { compose, withProps } from "recompose"
 import React, {useState, useEffect} from 'react'
 import marker from "./marker.png";
-import marker2 from "./marker2.png"
+import marker2 from "./marker2.png";
+import marker3 from "./marker3.png"
 // import { faBus } from "@fortawesome/free-solid-svg-icons";
 
 const MyMapComponent = compose(
@@ -24,6 +25,8 @@ const MyMapComponent = compose(
     
 
     const Electriva = [
+
+      {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"},
       // {"place": "MAYA PURI TOWARDS PUNJABI BAGH",	"lat":"28.637729	","lng":"77.129314"},
       // {"place": "PUNJABI BAGH WEST TOWARDS NETAJI SUBHASH PLACE",	"lat":"28.669995	","lng":"77.138068"},
       // {"place": "PUNJABI BAGH WEST TOWARDS DND",	"lat":"28.669927	","lng":"77.138067"},
@@ -64,7 +67,7 @@ const MyMapComponent = compose(
 
 
     let Becil = [
-      // {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
+      
       // {"place" : "Kamal cinema", "lat" : 	28.56526997485881, "lng" : 77.19891103529604},
       // {"place" : "Sapna Cinema ", "lat" : 	28.559510375909124, "lng" : 77.24640092566388},
       // // Ravindra Dhaba 28.56564359652041, 77.19932942691037 --
@@ -101,18 +104,23 @@ const MyMapComponent = compose(
       ]
     
       let others = [
-        {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
-        {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
-        {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
-        {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
-        {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
-        {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
-      {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
-      {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
-      {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
-      {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
-      {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
-      {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320}
+      //   {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
+      //   {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
+        // {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
+      //   {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
+      //   {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
+      //   {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
+      // {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
+      // {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
+      // {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
+      // {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
+      // {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
+      {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320},
+      {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
+      // {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044},
+      {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678},
+      {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
+      {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
       
         
       ]
@@ -153,7 +161,7 @@ const MyMapComponent = compose(
                 >
                 {Electriva.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(35, 40),
+                    return <Marker icon={{url: marker3, scaledSize: new window.google.maps.Size(25, 40),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Electriva"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
@@ -162,7 +170,7 @@ const MyMapComponent = compose(
                       
                       <InfoWindow>
                         <div>
-                          Electriva: {map.place}
+                          {map.place}
                         </div>
                       </InfoWindow>
                     : null }
@@ -170,7 +178,7 @@ const MyMapComponent = compose(
                 })}
                 {Blinkit.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(35, 40),
+                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(28, 32),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
