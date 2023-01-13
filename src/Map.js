@@ -11,9 +11,9 @@ const MyMapComponent = compose(
       // googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
       // googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-LLjEHUXavG3WqTGUB-DpXpEvh-eRhI&v=3.exp&libraries=geometry,drawing,places",
       googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAGP0yTwZ8BFM1U6vgZ292xZD3p_M13tSI&v=3.exp&libraries=geometry,drawing,places",
-      loadingElement: <div style={{ height: `200%` }} />,
-      containerElement: <div style={{ height: `400px` }} />,
-      mapElement: <div style={{ height: `200%` }} />,
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `100vh` }} />,
+      mapElement: <div style={{ height: `100%` }} />,
     }),
     withScriptjs,
     withGoogleMap
@@ -26,7 +26,7 @@ const MyMapComponent = compose(
 
     const Electriva = [
 
-      {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"},
+      // {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"},
       // {"place": "MAYA PURI TOWARDS PUNJABI BAGH",	"lat":"28.637729	","lng":"77.129314"},
       // {"place": "PUNJABI BAGH WEST TOWARDS NETAJI SUBHASH PLACE",	"lat":"28.669995	","lng":"77.138068"},
       // {"place": "PUNJABI BAGH WEST TOWARDS DND",	"lat":"28.669927	","lng":"77.138067"},
@@ -78,29 +78,29 @@ const MyMapComponent = compose(
       ]
 
       let Blinkit = [
-        {"place": "Super Store Delhi GK2 ES3","lat":	28.52812074766001, "lng": 77.2458265202614},
-        {"place": "Super Store Delhi Malviya Nagar ES38","lat":	28.53224243973015, "lng": 77.21330685583331},
-        {"place": "Super Store Delhi Vasant Kunj ES35","lat":	28.52540989528566, "lng": 77.15444501283176},
-        {"place": "Super Store Delhi Lajpat Nagar ES37","lat":	28.57561646115325, "lng": 77.24278735649168},
-        {"place": "Super Store Delhi Gautam Nagar ES15","lat":	28.562533917868816, "lng": 77.21100138815646},
-        {"place": "Super Store Delhi Ashram ES24 PR","lat":	28.576230, "lng": 77.255223},
-        {"place": "Super Store Delhi Sangam Vihar ES39 PR","lat":	28.500787, "lng": 77.235064},
-        {"place": "Super Store Delhi Jamia ES58 PR","lat":	28.553500,"lng": 77.299111},
-        {"place": "Super Store Delhi Panchsheel Vihar ES64","lat":	28.533888, "lng": 77.219093},
-        {"place": "Super Store Delhi Sarita Vihar ES81","lat":	28.537580, "lng": 77.300141},
-        {"place": "Super Store Delhi Neb Sarai ES43 PR","lat":	28.511313, "lng": 77.202132},
-        {"place": "Super Store Delhi Sant Nagar ES70","lat":	28.555925495111932, "lng": 77.24909109762488},
-        {"place": "Super Store Delhi Defence Colony ES71","lat":	28.573120, "lng": 77.227800},
-        {"place": "Super Store Delhi Prahladpur ES79","lat":	28.499667879069197, "lng": 77.29028212707135},
-        {"place": "Super Store Delhi Mahipalpur ES34","lat":	28.541341,"lng": 77.129294},
-        {"place": "Super Store Delhi SSN Marg ES82","lat":	28.496214279436945, "lng": 77.18475645651898},
-        {"place": "Super Store Delhi Govindpuri ES144 PR","lat":	28.532366867739867, "lng": 77.26705796389156},
-        {"place": "Super Store Delhi Green Park Extn ES97 PR","lat":	28.557824, "lng": 77.205225},
-        {"place": "Super Store Delhi Hauz Khas ES106 PR","lat":	28.551040, "lng": 77.204775},
-        {"place": "Super Store Delhi Basant Gaon ES154 PR","lat":	28.574146736126846, "lng": 77.16131842316497},
-        {"place": "Super Store Delhi RK Puram Sector-12 ES117 PR","lat":	28.574286815500358, "lng": 77.17598279758784},
-        {"place": "Super Store Delhi NFC ES48 ","lat":	28.571179, "lng": 77.275827},
-        {"place": "Super Store Delhi Chattarpur ES181","lat":	28.495470, "lng": 77.184882}
+        // {"place": "Super Store Delhi GK2 ES3","lat":	28.52812074766001, "lng": 77.2458265202614},
+        // {"place": "Super Store Delhi Malviya Nagar ES38","lat":	28.53224243973015, "lng": 77.21330685583331},
+        // {"place": "Super Store Delhi Vasant Kunj ES35","lat":	28.52540989528566, "lng": 77.15444501283176},
+        // {"place": "Super Store Delhi Lajpat Nagar ES37","lat":	28.57561646115325, "lng": 77.24278735649168},
+        // {"place": "Super Store Delhi Gautam Nagar ES15","lat":	28.562533917868816, "lng": 77.21100138815646},
+        // {"place": "Super Store Delhi Ashram ES24 PR","lat":	28.576230, "lng": 77.255223},
+        // {"place": "Super Store Delhi Sangam Vihar ES39 PR","lat":	28.500787, "lng": 77.235064},
+        // {"place": "Super Store Delhi Jamia ES58 PR","lat":	28.553500,"lng": 77.299111},
+        // {"place": "Super Store Delhi Panchsheel Vihar ES64","lat":	28.533888, "lng": 77.219093},
+        // {"place": "Super Store Delhi Sarita Vihar ES81","lat":	28.537580, "lng": 77.300141},
+        // {"place": "Super Store Delhi Neb Sarai ES43 PR","lat":	28.511313, "lng": 77.202132},
+        // {"place": "Super Store Delhi Sant Nagar ES70","lat":	28.555925495111932, "lng": 77.24909109762488},
+        // {"place": "Super Store Delhi Defence Colony ES71","lat":	28.573120, "lng": 77.227800},
+        // {"place": "Super Store Delhi Prahladpur ES79","lat":	28.499667879069197, "lng": 77.29028212707135},
+        // {"place": "Super Store Delhi Mahipalpur ES34","lat":	28.541341,"lng": 77.129294},
+        // {"place": "Super Store Delhi SSN Marg ES82","lat":	28.496214279436945, "lng": 77.18475645651898},
+        // {"place": "Super Store Delhi Govindpuri ES144 PR","lat":	28.532366867739867, "lng": 77.26705796389156},
+        // {"place": "Super Store Delhi Green Park Extn ES97 PR","lat":	28.557824, "lng": 77.205225},
+        // {"place": "Super Store Delhi Hauz Khas ES106 PR","lat":	28.551040, "lng": 77.204775},
+        // {"place": "Super Store Delhi Basant Gaon ES154 PR","lat":	28.574146736126846, "lng": 77.16131842316497},
+        // {"place": "Super Store Delhi RK Puram Sector-12 ES117 PR","lat":	28.574286815500358, "lng": 77.17598279758784},
+        // {"place": "Super Store Delhi NFC ES48 ","lat":	28.571179, "lng": 77.275827},
+        // {"place": "Super Store Delhi Chattarpur ES181","lat":	28.495470, "lng": 77.184882}
       ]
     
       let others = [
@@ -154,7 +154,7 @@ const MyMapComponent = compose(
   };
 
       return(
-          <div style={{}}>
+          <div className="container" style={{minHeight: "100vh"}}>
             <GoogleMap
                 defaultZoom={13}
                 defaultCenter={{ lat: 28.55135, lng : 77.200075 }}
