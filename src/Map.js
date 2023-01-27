@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react'
 import marker from "./marker.png";
 import marker2 from "./marker2.png";
 import marker3 from "./marker3.png"
+import marker4 from "./marker4.png"
 // import { faBus } from "@fortawesome/free-solid-svg-icons";
 
 const MyMapComponent = compose(
@@ -24,9 +25,9 @@ const MyMapComponent = compose(
     
     
 
-    const Electriva = [
+    let Electriva = [
 
-      {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"},
+      
       // {"place": "MAYA PURI TOWARDS PUNJABI BAGH",	"lat":"28.637729	","lng":"77.129314"},
       // {"place": "PUNJABI BAGH WEST TOWARDS NETAJI SUBHASH PLACE",	"lat":"28.669995	","lng":"77.138068"},
       // {"place": "PUNJABI BAGH WEST TOWARDS DND",	"lat":"28.669927	","lng":"77.138067"},
@@ -78,46 +79,51 @@ const MyMapComponent = compose(
       ]
 
       let Blinkit = [
-        {"place": "Super Store Delhi GK2 ES3","lat":	28.52812074766001, "lng": 77.2458265202614},
-        {"place": "Super Store Delhi Malviya Nagar ES38","lat":	28.53224243973015, "lng": 77.21330685583331},
-        {"place": "Super Store Delhi Vasant Kunj ES35","lat":	28.52540989528566, "lng": 77.15444501283176},
-        {"place": "Super Store Delhi Lajpat Nagar ES37","lat":	28.57561646115325, "lng": 77.24278735649168},
-        {"place": "Super Store Delhi Gautam Nagar ES15","lat":	28.562533917868816, "lng": 77.21100138815646},
-        {"place": "Super Store Delhi Ashram ES24 PR","lat":	28.576230, "lng": 77.255223},
-        {"place": "Super Store Delhi Sangam Vihar ES39 PR","lat":	28.500787, "lng": 77.235064},
-        {"place": "Super Store Delhi Jamia ES58 PR","lat":	28.553500,"lng": 77.299111},
-        {"place": "Super Store Delhi Panchsheel Vihar ES64","lat":	28.533888, "lng": 77.219093},
-        {"place": "Super Store Delhi Sarita Vihar ES81","lat":	28.537580, "lng": 77.300141},
-        {"place": "Super Store Delhi Neb Sarai ES43 PR","lat":	28.511313, "lng": 77.202132},
-        {"place": "Super Store Delhi Sant Nagar ES70","lat":	28.555925495111932, "lng": 77.24909109762488},
-        {"place": "Super Store Delhi Defence Colony ES71","lat":	28.573120, "lng": 77.227800},
-        {"place": "Super Store Delhi Prahladpur ES79","lat":	28.499667879069197, "lng": 77.29028212707135},
-        {"place": "Super Store Delhi Mahipalpur ES34","lat":	28.541341,"lng": 77.129294},
-        {"place": "Super Store Delhi SSN Marg ES82","lat":	28.496214279436945, "lng": 77.18475645651898},
-        {"place": "Super Store Delhi Govindpuri ES144 PR","lat":	28.532366867739867, "lng": 77.26705796389156},
-        {"place": "Super Store Delhi Green Park Extn ES97 PR","lat":	28.557824, "lng": 77.205225},
-        {"place": "Super Store Delhi Hauz Khas ES106 PR","lat":	28.551040, "lng": 77.204775},
-        {"place": "Super Store Delhi Basant Gaon ES154 PR","lat":	28.574146736126846, "lng": 77.16131842316497},
-        {"place": "Super Store Delhi RK Puram Sector-12 ES117 PR","lat":	28.574286815500358, "lng": 77.17598279758784},
-        {"place": "Super Store Delhi NFC ES48 ","lat":	28.571179, "lng": 77.275827},
-        {"place": "Super Store Delhi Chattarpur ES181","lat":	28.495470, "lng": 77.184882}
+        {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"}
+        // {"place": "Super Store Delhi GK2 ES3","lat":	28.52812074766001, "lng": 77.2458265202614},
+        // {"place": "Super Store Delhi Malviya Nagar ES38","lat":	28.53224243973015, "lng": 77.21330685583331},
+        // {"place": "Super Store Delhi Vasant Kunj ES35","lat":	28.52540989528566, "lng": 77.15444501283176},
+        // {"place": "Super Store Delhi Lajpat Nagar ES37","lat":	28.57561646115325, "lng": 77.24278735649168},
+        // {"place": "Super Store Delhi Gautam Nagar ES15","lat":	28.562533917868816, "lng": 77.21100138815646},
+        // {"place": "Super Store Delhi Ashram ES24 PR","lat":	28.576230, "lng": 77.255223},
+        // {"place": "Super Store Delhi Sangam Vihar ES39 PR","lat":	28.500787, "lng": 77.235064},
+        // {"place": "Super Store Delhi Jamia ES58 PR","lat":	28.553500,"lng": 77.299111},
+        // {"place": "Super Store Delhi Panchsheel Vihar ES64","lat":	28.533888, "lng": 77.219093},
+        // {"place": "Super Store Delhi Sarita Vihar ES81","lat":	28.537580, "lng": 77.300141},
+        // {"place": "Super Store Delhi Neb Sarai ES43 PR","lat":	28.511313, "lng": 77.202132},
+        // {"place": "Super Store Delhi Sant Nagar ES70","lat":	28.555925495111932, "lng": 77.24909109762488},
+        // {"place": "Super Store Delhi Defence Colony ES71","lat":	28.573120, "lng": 77.227800},
+        // {"place": "Super Store Delhi Prahladpur ES79","lat":	28.499667879069197, "lng": 77.29028212707135},
+        // {"place": "Super Store Delhi Mahipalpur ES34","lat":	28.541341,"lng": 77.129294},
+        // {"place": "Super Store Delhi SSN Marg ES82","lat":	28.496214279436945, "lng": 77.18475645651898},
+        // {"place": "Super Store Delhi Govindpuri ES144 PR","lat":	28.532366867739867, "lng": 77.26705796389156},
+        // {"place": "Super Store Delhi Green Park Extn ES97 PR","lat":	28.557824, "lng": 77.205225},
+        // {"place": "Super Store Delhi Hauz Khas ES106 PR","lat":	28.551040, "lng": 77.204775},
+        // {"place": "Super Store Delhi Basant Gaon ES154 PR","lat":	28.574146736126846, "lng": 77.16131842316497},
+        // {"place": "Super Store Delhi RK Puram Sector-12 ES117 PR","lat":	28.574286815500358, "lng": 77.17598279758784},
+        // {"place": "Super Store Delhi NFC ES48 ","lat":	28.571179, "lng": 77.275827},
+        // {"place": "Super Store Delhi Chattarpur ES181","lat":	28.495470, "lng": 77.184882}
+      ]
+
+      Electriva = [
+
+        {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
+        {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
+        {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
+        {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
+        {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
+        {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
+      {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
+      {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
+      {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
+      {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
+      {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
+      {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044}
       ]
     
       let others = [
-      //   {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
-      //   {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
-        // {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
-      //   {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
-      //   {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
-      //   {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
-      // {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
-      // {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
-      // {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
-      // {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
-      // {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
       {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320},
       {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
-      // {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044},
       {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678},
       {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
       {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
@@ -161,7 +167,7 @@ const MyMapComponent = compose(
                 >
                 {Electriva.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker3, scaledSize: new window.google.maps.Size(25, 40),
+                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(28, 32),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Electriva"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
@@ -178,7 +184,7 @@ const MyMapComponent = compose(
                 })}
                 {Blinkit.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker2, scaledSize: new window.google.maps.Size(28, 32),
+                    return <Marker icon={{url: marker3, scaledSize: new window.google.maps.Size(25, 40),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
