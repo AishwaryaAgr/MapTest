@@ -79,7 +79,7 @@ const MyMapComponent = compose(
       ]
 
       let Blinkit = [
-        {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"}
+        // {"place": "Baaz Maintenance Hub", "lat": "28.536472" ,"lng":"77.226619"}
         // {"place": "Super Store Delhi GK2 ES3","lat":	28.52812074766001, "lng": 77.2458265202614},
         // {"place": "Super Store Delhi Malviya Nagar ES38","lat":	28.53224243973015, "lng": 77.21330685583331},
         // {"place": "Super Store Delhi Vasant Kunj ES35","lat":	28.52540989528566, "lng": 77.15444501283176},
@@ -106,27 +106,59 @@ const MyMapComponent = compose(
       ]
 
       Electriva = [
-
-        {"place": "Nehru Enclave Neeche", "lat": 28.540152, "lng": 77.249026},
-        {"place": "Nehru Enclave Upar", "lat": 28.555394810823778, "lng": 77.24198231956211},
-        {"place": "Chattarpur", "lat": 28.506208, "lng": 77.185101},
-        {"place": "Vasant Kunj", "lat": 28.527887944330118, "lng": 77.15073576451272},
-        {"place": "Rajinder Da Dhaba", "lat": 28.56564359652041, "lng": 77.19932942691037},
-        {"place": "Lajpat Nagar Facing DND",	"lat":"28.565361	","lng":"77.242855"},
-      {"place": "Lajpat nagar Facing Dhaula Kuan ",	"lat":"28.564664	","lng":"77.24145"},
-      {"place": "Nehru place facing Modi mill fly over ",	"lat":"28.547248	","lng":"77.252879"}, 
-      {"place": "Munirka facing modi mill fly over ",	"lat":"28.554953	","lng":"77.177535"}, 
-      {"place": "Hauz khas metro station facing modi mill flyover  ",	"lat":"28.543942	","lng":"77.204581"}, 
-      {"place" : "B-6, Safdarjung ", "lat" : 	28.55918191001921, "lng" : 77.19655972566386}, 
-      {"place" : "Green Park (HOD)", "lat" : 	28.56053555446929, "lng" : 77.20744727738044}
-      ]
+        {"place": "NEHRU NAGAR TOWARDS DHAULA KUAN", "lat":	28.567476, "lng":	77.25360},
+{"place": "NEHRU NAGAR TOWARDS DND", "lat":	28.56928	, "lng":77.253721},
+{"place": "LAJPAT NAGAR -4 TOWARDS DHAULA KUAN", "lat":	28.564648, "lng":	77.241622},
+{"place": " LAJPAT NAGAR -3 FACING DND", "lat":	28.56533	, "lng":77.242799},
+{"place": "SOUTH EX -1 TOWARDS DND", "lat":	28.56892	, "lng":77.219414},
+{"place": "SOUTH EXTENSION -2 FACING DHAULA KUAN", "lat":	28.568466, "lng":	77.21961},
+{"place": "SOUTH EXTENSION -2 FACING DHAULA KUAN", "lat":	28.568591, "lng":	77.219687},
+{"place": "NEHRU PLACE TOWRADS R&R HOSPITAL", "lat":	28.54736	, "lng":77.255451},
+{"place": "NEHRU PLACE TOWARDS MODI MILL", "lat":	28.547321, "lng":	77.252868},
+{"place": "MASJID MOTH TOWARDS R&R HOSPITAL", "lat":	28.540522, "lng":	77.234954},
+{"place": "MASJID MOTH TOWARDS MODI MILL", "lat":	28.541602, "lng":	77.232825},
+{"place": " MODI MILL OKHLA TOWARDS MODI MILL", "lat":	28.551811, "lng":	77.264079},
+{"place": " MODI MILL OKHLA TOWARDS MODI MILL", "lat":	28.551811, "lng":	77.264079},
+{"place": "MODI MILL OKHLA TOWARDS R&R", "lat":	28.549275, "lng":	77.261688},
+{"place": "MAYAPURI TOWARDS NSP", "lat":	28.638548, "lng":	77.129355},
+{"place": "MOTI BAGH TOWARDS DHAULA KUAN", "lat":	28.570927, "lng":	77.18253},
+{"place": "MOTI BAGH TOWARDS DND", "lat":	28.572692, "lng":	77.180761},
+{"place": "HAUZ KHAS FACING MODI MILL", "lat":	28.544106, "lng":	77.204483},
+{"place": "IIT FACING MODI MILL", "lat":	28.548368, "lng":	77.189176},
+{"place": "ANDREWS GANJ TOWARDS DND", "lat":	28.566357, "lng":	77.229875},
+{"place": "ANDREWS GANJ TOWARDS DHAULA KUAN", "lat":	28.56599	, "lng":77.229396},
+{"place": "ANDREWS GANJ TOWARDS DHAULA KUAN", "lat":	28.56599	, "lng":77.229396},
+{"place": "RAJ NAGAR TOWARDS DND", "lat":	28.569996, "lng":	77.202769},
+{"place": "SAFDARJUNG TOWARDS DND", "lat":	28.569931, "lng":	77.202744},
+{"place": "SAFDARJUNG TOWARDS DND", "lat":	28.569931, "lng":	77.202744},
+{"place": "SAFDARJUNG TOWARDS DHAULA KUAN", "lat":	28.569432, "lng":	77.20451},
+{"place": "BHIKAJI CAMA PALACE TOWARDS DHAULA KUAN ( METRO)", "lat":	28.569361, "lng":	77.188455},
+{"place": "BHIKAJI CAMA PALACE TOWARDS DHAULA KUAN ( METRO)", "lat":	28.569361, "lng":	77.188455},
+{"place": "HYATT FACING NSP", "lat":	28.569867, "lng":	77.185258},
+{"place": "HYATT FACING NSP", "lat":	28.569867, "lng":	77.185258},
+{"place": "PUNJABI BAGH FACING DND", "lat":	28.665886, "lng":	77.133932},
+{"place": "PUNJABI BAGH  FACING NSP", "lat":	28.670817, "lng":	77.138487},
+{"place": "PUNJABI BAGH  FACING NSP", "lat":	28.670873, "lng":	77.138174},
+{"place": "PAMPOSH ENCLAVE TOWRADS MODI MILL", "lat":	28.543657, "lng":	77.243216},
+{"place": "PAMPOSH ENCLAVE TOWRADS R&R HOSPITAL ", "lat":	28.544625, "lng":	77.246911},
+{"place": "MUNIRKA TOWARDS MODI MILL ", "lat":	28.554964, "lng":	77.177579},
+{"place": "MALAI MANDIR TOWRADS MODI MILL", "lat":	28.566265, "lng":	77.166329},
+{"place": "SOAMI NAGAR TOWRADS MODI MILL", "lat":	28.542074, "lng":	77.226898},
+{"place": "SOUTH CAMPUS TOWARDS DHAULA KUAN", "lat":	28.590115, "lng":	77.168689},
+{"place": "PUSHP VIHAR  SEC-01 ", "lat":	28.521354, "lng":	77.221478},
+{"place": "Rajouri Garden SDMC PARKING MARKET", "lat":	28.647625, "lng":	77.120535},
+{"place": "Rajouri Garden TOWARDS NSP", "lat":	28.644227, "lng":	77.127342},
+{"place": "MAYAPURI TOWARDS DND", "lat":	28.639614, "lng":	77.129469},
+{"place": "MAYAPURI TOWARDS DND", "lat":	28.639614, "lng":	77.129469},
+{"place": "PANCHSHEEL PARK FACING MODI MILL", "lat":	28.542773, "lng":	77.221788}]
+      
     
       let others = [
-      {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320},
-      {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
-      {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678},
-      {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
-      {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
+      // {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320},
+      // {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
+      // {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678},
+      // {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
+      // {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
       
         
       ]
@@ -182,40 +214,7 @@ const MyMapComponent = compose(
                     : null }
                     </Marker>;
                 })}
-                {Blinkit.map((map, index) => {
-                    console.log(map);
-                    return <Marker icon={{url: marker3, scaledSize: new window.google.maps.Size(25, 40),
-                      // origin: new window.google.maps.Point(0, 0),
-                      // anchor: new window.google.maps.Point(32,65),
-                      labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
-                      
-                      {
-                        location ==  `Becil${index}` ? 
-                      <InfoWindow>
-                        <div>
-                          {map.place}
-                        </div>
-                      </InfoWindow>
-                    : null }
-                    </Marker>;
-                })}
-                {others.map((map, index) => {
-                    console.log(map);
-                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(60, 60),
-                      // origin: new window.google.maps.Point(0, 0),
-                      // anchor: new window.google.maps.Point(32,65),
-                      labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Others"+index)}  position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
-                      
-                      {
-                        location ==  `Others${index}` ? 
-                      <InfoWindow>
-                        <div>
-                           {map.place}
-                        </div>
-                      </InfoWindow>
-                    : null }
-                    </Marker>;
-                })}
+                
             </GoogleMap>
         </div>
         )
