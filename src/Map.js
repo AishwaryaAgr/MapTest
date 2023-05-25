@@ -153,15 +153,14 @@ const MyMapComponent = compose(
 {"place": "PANCHSHEEL PARK FACING MODI MILL", "lat":	28.542773, "lng":	77.221788}]
       
     
-      let others = [
-      // {"place" : "Baaz Bikes Office", "lat" :  28.518040	, "lng" : 77.199320},
-      // {"place" : "Max Hospital ( saket)", "lat" : 	28.527181359168495, "lng" : 77.21210188518724},
-      // {"place": "Tyre Czar", "lat": 28.53638238593784, "lng": 77.20924231341678},
-      // {"place": "Masjid Moth facing modi mill flyover ",	"lat":"28.541814	","lng":"77.232858"},
-      // {"place": "South Extension facing Dhaula Kuan ",	"lat":"28.568439	","lng":"77.219615"},
-      
-        
-      ]
+let Charj = [
+  {"place" : "ASIAD Village", "lat" :  28.550611	, "lng" : 77.210806},
+  {"place" : "Siri Fort Auditorium", "lat" : 	28.554083, "lng" :  77.212917},
+  {"place": "BRT Towards Greater Kailash 1", "lat": 28.553806, "lng": 77.228611},
+  {"place": "Qutab Minar",	"lat":28.526528,"lng":77.186056},
+  {"place": "JLN Stadium Opp. Gate No.1",	"lat":28.583083,"lng":77.229861},
+  {"place": " Andheriya Mod",	"lat":28.550639,"lng": 77.210806},  
+]
 
 	useEffect(() => {
 		fetch(`https://os0ylhupva.execute-api.ap-south-1.amazonaws.com/default/GetLocation`)
@@ -205,6 +204,23 @@ const MyMapComponent = compose(
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Electriva"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
                       {
                         location ==  `Electriva${index}` ? 
+                      
+                      <InfoWindow>
+                        <div>
+                          {map.place}
+                        </div>
+                      </InfoWindow>
+                    : null }
+                    </Marker>;
+                })}
+                {Charj.map((map, index) => {
+                    console.log(map);
+                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(44, 44),
+                      // origin: new window.google.maps.Point(0, 0),
+                      // anchor: new window.google.maps.Point(32,65),
+                      labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Charj"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+                      {
+                        location ==  `Charj${index}` ? 
                       
                       <InfoWindow>
                         <div>
