@@ -527,8 +527,8 @@ const MyMapComponent = compose(
   return (
     <div style={{}}>
       <GoogleMap
-        defaultZoom={13}
-        defaultCenter={{ lat: 28.55135, lng: 77.200075 }}
+        defaultZoom={12}
+        defaultCenter={{ lat: 28.44983,lng: 77.00096 }}
       >
         {Zomato.map((map, index) => {
           console.log(map);
