@@ -20,43 +20,79 @@ const MyMapComponent = compose(
   const [liveMarkers, setLiveMarkers] = useState([])
   const [location, setLocation] = useState()
 
-  let MCD = [
+  let NCR = [
 
-    {"place":"Gazipur Gaushala Mcd Parking ","lat":28.54955730788096,"lng":77.25454520284971},
-    {"place":"Infront Of Kiosk no 5 to 9 paragati deep mall laxmi Nager","lat":28.53915264372095,"lng":77.13982917802286},
-    {"place":"Near Supreme Enclave , Mayur Vihar Phase 1","lat":28.570650917669163,"lng":77.25052695669174},
-    {"place":"Ploat  no 10 V3S Mall,Laxmi Nager","lat":28.525873573610518,"lng":77.22278165094406},
-    {"place":"Covered Parking at Patparganj Market,Near Mother Dairy","lat":28.5753219017612242,"lng":77.23266634525184},
-    {"place":"Near Milan Vihar Appartment behind Max Hospital","lat":28.51845257679814,"lng":77.2259903879371},
-    {"place":"Near Pankaj Plaza Joshi Colony IP Extention","lat":28.608710821867376,"lng":77.29176254995548},
-    {"place":"Adjoining Saraswati Kunj society patparganj","lat":28.621932597264614,"lng":77.28643567497795},
-    {"place":"South Ganeshnager chowk patparganj road","lat":28.589256199823453,"lng":77.23098182575112},
-    {"place":"Bihari Colony","lat":28.626027907360818,"lng":77.28409783639655},
-    {"place":"Adjoining Community Hall Near jafrabad metro Station","lat":28.64320855044141,"lng":77.28409783639655},
-    {"place":"Behind Ambedkar Collage Yamuna Vihar","lat":28.682387,"lng":77.275973},
-    {"place":"Near DCP Office Dhobi Ghat New Seelampur","lat":28.69966,"lng":77.285701},
-    {"place":"Near & Around D Aqua Hotel Usmanpur ","lat":28.672784,"lng":77.271094},
-    {"place":"Shastri Park Near Community Hall","lat":28.67312,"lng":77.260438},
-    {"place":"Near Jagparvesh Chandra Hospital Shastri Park","lat":28.672001,"lng":77.257995},
-    {"place":"Back Side CNG Pump Near Jag parvesh Chandra Hospital","lat":28.67671,"lng":77.264489},
-    {"place":"SRM apartment near mother dairy","lat":28.674002,"lng":77.261739},
-    {"place":"Janakpuri District Centre-Basement No.5","lat":28.66792,"lng":77.256726},
-    {"place":"Behind gaurav apartment IP Extension","lat":28.600842,"lng":77.329758},
-    {"place":"DDA  Shopping Complex Rajdhani Enclave","lat":28.63380,"lng":77.30527},
-    {"place":"DDA  Market pankaj mayur plaza mayur Phase 3","lat":28.642723,"lng":77.296543},
-    {"place":"Coverd Parking Mandoli extn","lat":28.61354,"lng":77.337765},
-    {"place":"DDA  Covered land opposite kotla village mayur vihar pahse 1","lat":28.645452,"lng":77.301341},
-    {"place":"Under flyour mansarover park metro near metro station","lat":28.61086,"lng":77.29973},
-    {"place":"In Front Of Community Center Janta Flat Nandnagri","lat":28.66553,"lng":77.30116},
-    {"place":"Samrat Cinema Shakurpur","lat":28.706,"lng":77.163},
-    {"place":"Pushpa Bhawan Madanpur","lat":28.699843,"lng":77.311531},
-    {"place":"Fortis Hospital Vasant Kunj","lat":28.527193,"lng":77.231924},
-    {"place":"Kalkaji Mandir","lat":28.519071,"lng":77.159851},
-    {"place":"Plot No.34 Road No 44.Pitampura ","lat":28.550177,"lng":77.263011},
-    {"place":"Plot No. 1 & 2 at Community Centre Road No.44 Opposite TPDDL Pitampura","lat":28.6883,"lng":77.1320},
-    {"place":"Plot No-1,Road No-44,Behind Aggarwal Prestige Mall Infront of B.T.W  Rani Bagh","lat":28.6883,"lng":77.1320},
-    {"place":"Parking Site Community Centre adjoining Road No.44 Pitampura","lat":28.6883,"lng":77.1328},
-    {"place":"MCD Auto Workshop Plot at MangolpurPuri","lat":28.6883,"lng":77.1328}
+    { "place": " RK Puram Market (PVR SANGAM)", "lat": 28.57276, "lng": 77.173787 },
+    { "place": " Vasant Vihar Maket (infront of Vasant Square Mall)", "lat": 28.524155, "lng": 77.156224 },
+    { "place": "South Extension facing Dhaula Kuan ", "lat": 28.568439, "lng": 77.219615 },
+    { "place": "Moti Bag facing Dhaula Kuan", "lat": 28.570927, "lng": 77.18253 },
+    { "place": "Dhaula Kuan/South Campus facing Dhaula kuan", "lat": 28.590921, "lng": 77.168314 },
+    { "place": " Andrews Ganj facing DND", "lat": 28.566473, "lng": 77.229749 },
+    { "place": "Andrews Ganj facing Dhaula Kuan ", "lat": 28.56599, "lng": 77.229396 },
+    { "place": "Lajpat Nagar Facing DND", "lat": 28.565361, "lng": 77.242855 },
+    { "place": " Lajpat nagar Facing Dhaula Kuan ", "lat": 28.564664, "lng": 77.24145 },
+    { "place": "Nehru place facing Modi mill fly over ", "lat": 28.547248, "lng": 77.252879 },
+    { "place": "Nehru place facing R& R Hospital", "lat": 28.547711, "lng": 77.254095 },
+    { "place": " Pamposh Enclave facing R& R Hospital", "lat": 28.544623, "lng": 77.247026 },
+    { "place": "Pamposh Enclave facing modi mill flyover ", "lat": 28.543653, "lng": 77.243324 },
+    { "place": "Masjid Moth facing R& R Hospital", "lat": 28.541214, "lng": 77.234786 },
+    { "place": "Masjid Moth facing modi mill flyover ", "lat": 28.541814, "lng": 77.232858 },
+    { "place": "ITO Towards Ashram  (ring road /MG road)", "lat": 28.623997, "lng": 77.247688 },
+    { "place": "Indraprastha Towards Ashram   (ring road /MG road)", "lat": 28.608747, "lng": 77.252867 },
+    { "place": "sarai kale khan towards ashram (ring road /MG road)", "lat": 28.589354, "lng": 77.258956 },
+    { "place": "Benito Juarez Marg, Nanak Pura South Moti Bagh (Road- 01)", "lat": 28.582763, "lng": 77.075209 },
+    { "place": "Benito Juarez Marg, Nanak Pura South Moti Bagh Near- West End Colony(Road - 01)", "lat": 28.575595, "lng": 77.164117 },
+    { "place": "North West Moti Bagh Near Moti bagh Metro station (road - 02)", "lat": 28.578038, "lng": 77.174545 },
+    { "place": "North West Moti Bagh Near SDMC Toilet (road - 02)", "lat": 28.572263, "lng": 77.16237 },
+    { "place": "Sector-01 RK Puram near Muhamadpur Red Light (road - 03)", "lat": 28.564455, "lng": 77.180414 },
+    { "place": "Sector-05 RK Puram Near SDMC Dalao (road - 03)", "lat": 28.559744, "lng": 77.174559 },
+    { "place": "Sector -02 RK Puram Near Rama Krishna puram society (road -04)", "lat": 28.558092, "lng": 77.186833 },
+    { "place": "Sector -02 RK Puram Facing Rama Krishna puram  (road -04)", "lat": 28.556701, "lng": 77.186355 },
+    { "place": "Sheikh Sarai Phase -02 sector 7  Near Sheikh Sarai Red light (road - 10)", "lat": 28.532793, "lng": 77.23197 },
+    { "place": "Madangir village,near Phusp Vihar  (road- 10)", "lat": 28.52435, "lng": 77.230378 },
+    { "place": "Gurudwara Rd, Sector -03 , Near JJ Colony (road - 10)", "lat": 28.517744, "lng": 77.227274 },
+    { "place": " Madangir Village  Opposite NCB Office (road-10)", "lat": 28.519733, "lng": 77.228062 },
+    { "place": "Hauj Khas Near Metro Station", "lat": 28.543756, "lng": 77.204659 },
+    { "place": "Mayfair Gardens Near The Mother internation School (road-09)", "lat": 28.544053, "lng": 77.204494 },
+    { "place": "Qutab Park, Near Qutub Minar  ( road- 11)", "lat": 28.526028, "lng": 77.187708 },
+    { "place": "Qutab Park, Near Qutub Minar  ( road- 11)", "lat": 28.52592, "lng": 77.187398 },
+    { "place": "Sarvoday Enclave Near Adhchini ( road- 09)", "lat": 28.539086, "lng": 77.199438 },
+    { "place": "Greater Kailash-1, Near shri Fort Park (road-07)", "lat": 28.549012, "lng": 77.229217 },
+    { "place": "Lotus temple (road-08) car parking", "lat": 28.555829, "lng": 77.258445 },
+    { "place": "Ghitorni metro facing Gurgaon MG road", "lat": 28.49329, "lng": 77.14833 },
+    { "place": "Ghitorni metro facing Delhi MG road", "lat": 28.49398, "lng": 77.14911 },
+    { "place": "Arjangarh metro facing gurgaon MG road", "lat": 28.48014, "lng": 77.12523 },
+    { "place": "Arjangarh metro facing Delhi MG road", "lat": 28.48074, "lng": 77.12546 },
+    { "place": "Hauj Khas Near Post office (road-05)", "lat": 28.540061, "lng": 77.198875 },
+    { "place": "chattarpur opposite metro station facing gurgoan MG rd", "lat": 28.504102, "lng": 77.171702 },
+    { "place": "Chattarpur Near OICL pump facing delhi MG rd.", "lat": 28.503436, "lng": 77.172147 },
+    { "place": "Sultanpur metro facing Delhi mohalla clinic facing Gurgaon MG road", "lat": 28.499535, "lng": 77.163101 },
+    { "place": "Sultanpur near bus stand facing Delhi MG road", "lat": 28.498235, "lng": 77.15961 },
+    { "place": "Saket metro station Facing badarpur Rd.", "lat": 28.520346, "lng": 77.20211 },
+    { "place": "Hamdard nagar near Hamdard university facing Badarpur rd.", "lat": 28.512489, "lng": 77.250983 },
+    { "place": "Jasola Infront of Apolo Hospital infront of District park Badarpur Rd", "lat": 28.639417, "lng": 77.283137 },
+    { "place": "Jasola in between IGL and IOCL Noida Rd.", "lat": 28.538418, "lng": 77.289877 },
+    { "place": "Mohan cooperative infront of Volvo Ashram Rd.", "lat": 28.516536, "lng": 77.295676 },
+    { "place": "Jasola infront south delhi police housing residence ashram road", "lat": 28.5412, "lng": 77.280916 },
+    { "place": "Nizamuddin infront of police station Indiagate Rd.", "lat": 28.592716, "lng": 77.248784 },
+    { "place": "Nizamuddin near bus stop Badarpur Rd.", "lat": 28.591529, "lng": 77.244734 },
+    { "place": "Community center NFC SDMC car parking ", "lat": 28.56128, "lng": 77.268524 },
+    { "place": "saket infront of District Court Malviye nagar Rd.", "lat": 28.6013, "lng": 77.026722 },
+    { "place": "Community center Saket", "lat": 28.522814, "lng": 77.207268 },
+    { "place": "Jasola Mall Opposite Modi Tower", "lat": 28.538325, "lng": 77.287956 },
+    { "place": "Okhla Phase-01 Circle opposite Crown Plaza Kalkaji mandir rd.", "lat": 28.528906, "lng": 77.270726 },
+    { "place": "Govindpuri metro kalkaji road", "lat": 28.543076, "lng": 77.263604 },
+    { "place": "Delhi metro housing Ali Extension Badarpur rd.", "lat": 28.52269, "lng": 77.294638 },
+    { "place": "Hauj Rani near Malviya nagar metro", "lat": 28.529039, "lng": 77.214434 },
+    { "place": "Josip Broz Tito Marg GK Enclave-01 Near Indian Oil petrol Pump (road - 07)", "lat": 28.547846, "lng": 77.228848 },
+    { "place": "Seth sarai Near National Institute of TB and respiratory diseases (road-09)", "lat": 28.528691, "lng": 77.190109 },
+    { "place": "South extension Uday park infrontof hudco centre", "lat": 28.563634, "lng": 77.223105 },
+    { "place": "Mayapuri industrial area near SBI bank mayapuri road", "lat": 28.61754, "lng": 77.11136 },
+    { "place": "Delhi cantt jail road near brahmos aerospace bus stop pankha road", "lat": 28.60463, "lng": 77.12849 },
+    { "place": "Better place mall pankha road", "lat": 28.6126, "lng": 77.08822 },
+    { "place": "Krishna park facing Haiderpur", "lat": 28.63956, "lng": 77.08169 },
+    { "place": "Madhuban chowk facing Janakpuri", "lat": 28.70619, "lng": 77.13339 },
+    { "place": "West enclave pitampura facing janakpuri", "lat": 28.69258, "lng": 77.10002 }
   ]
 
 
@@ -87,17 +123,16 @@ const MyMapComponent = compose(
     rotation: 0,
     scale: 2,
   };
-
   return (
     <div style={{}}>
       <GoogleMap
         defaultZoom={12}
-        defaultCenter={{ lat: 28.621268, lng:77.256561 }}
+        defaultCenter={{ "lat": 28.556701, "lng": 77.186355 }}
       >
-        {MCD.map((map, index) => {
+        {NCR.map((map, index) => {
           console.log(map);
           return <Marker icon={{
-            url: marker2, scaledSize: new window.google.maps.Size(33, 35),
+            url: marker2, scaledSize: new window.google.maps.Size(36, 39),
             labelOrigin: new window.google.maps.Point(35, 25),
           }} onClick={() => setLocation("MCD" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             {
