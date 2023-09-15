@@ -38,10 +38,14 @@ const MyMapComponent = compose(
     { "place": "Masjid Moth facing modi mill flyover ", "lat": 28.541814, "lng": 77.232858 },
     { "place": "Masjid Moth facing R& R Hospital", "lat": 28.541214, "lng": 77.234786 },
     { "place": " Hauz khas metro station facing modi mill flyover  ", "lat": 28.543942, "lng": 77.204581 },
+    
 
-
-
-
+    { "place": "Sultanpur near bus stop Facing Delhi MG rd.", "lat": 28.498235, "lng": 77.15961 },
+    { "place": "North West Moti Bagh Near SDMC Toilet (road - 02)", "lat": 28.572263, "lng": 77.16237 },
+    { "place": "Sector -02 RK Puram Near Rama Krishna puram society (road -04)", "lat": 28.558092, "lng": 77.186833 },
+    { "place": "Govindpuri metro Kalkaji rd.", "lat": 28.543076, "lng": 77.263604 },
+    { "place": "Mohan cooperative infront of Volvo Ashram Rd.", "lat": 28.516536, "lng": 77.295676 },
+    { "place": "Gurudwara Rd, Sector -03 , Near JJ Colony (road - 10)", "lat": 28.517744, "lng": 77.227274 },
     { "place": " Vasant Vihar Maket (infront of Vasant Square Mall)", "lat": 28.524155, "lng": 77.156224 },
     { "place": "Arjangarh metro Station facing gurgoan MG Rd.", "lat": 28.48014, "lng": 77.12523 },
     { "place": "Ghitorni Metro station Near Bus Stop Facing Delhi  MG Rd.", "lat": 28.49398, "lng": 77.14911 },
@@ -53,6 +57,8 @@ const MyMapComponent = compose(
     { "place": "Nizamuddin near bus stop Badarpur Rd.", "lat": 28.591529, "lng": 77.244734 },
     { "place": " INDRAPRASTHA TOWARDS ASHRAM ( Ring Road/MG Road)", "lat": 28.608747, "lng": 77.252867 },
     { "place": "ITO TOWARDS RAJGHAT (Ring Road/MG Road)", "lat": 28.617945, "lng": 77.2488 },
+    
+
 
     { "place": "Dwarka sec-12 opposite Redision blue", "lat": 28.594964, "lng": 77.037101 },
     { "place": "Main Rajapuri rd.Infront of HDFC bank", "lat": 28.602897, "lng": 77.056774 },
@@ -77,11 +83,13 @@ const MyMapComponent = compose(
     { "place": "Benito Juarez Marg, Nanak Pura South Moti Bagh (Road- 01)", "lat": 28.582763, "lng": 77.075209 },
 
 
+    
+
+
     { "place": "Mayapuri Industrial Area Near SBI bank Mayapuri Rd.", "lat": 28.61754, "lng": 77.11136 },
     { "place": "Delhi cantt Jail Rd Near Brahmos Aerospace Bus stop Pankha Rd.", "lat": 28.60463, "lng": 77.12839 },
     { "place": "Better Place Mall Pankha Rd.", "lat": 28.6126, "lng": 77.08822 },
     { "place": "NARAINA VIHAR TOWARDS DND", "lat": 28.627432, "lng": 77.133582 },
-    { "place": "NARAINA VIHAR TOWARDS PUNJABI BAGH", "lat": 28.615597, "lng": 77.136371 },
     { "place": "Mahavir nagar tilak nagar facing janakpuri", "lat": 28.63166, "lng": 77.08137 },
     { "place": "Subhash Nagar ( Tilak Nagar Market)", "lat": 28.637258, "lng": 77.096853 },
     { "place": " Vikas Puri Market ( PVR Sonia Vikas Puri)", "lat": 28.638996, "lng": 77.075209 },
@@ -92,14 +100,14 @@ const MyMapComponent = compose(
     { "place": "ESI HOSPITAL TOWARDS DND", "lat": 28.659159, "lng": 77.129267 },
     { "place": "RAJOURI GARDEN TOWARDS PUNJABI BAGH", "lat": 28.64389, "lng": 77.127124 },
     { "place": "CARIAPPA VIHAR TOWARDS DND", "lat": 28.644936, "lng": 77.127446 },
-    { "place": "MAYA PURI TOWARDS PUNJABI BAGH", "lat": 28.637729, "lng": 77.129314 },
-    { "place": " Punjabi Bag Market (Punjabi bagh Central Market)", "lat": 28.670491, "lng": 77.133516 },
     { "place": "PUNJABI BAGH WEST TOWARDS DND", "lat": 28.669927, "lng": 77.138067 },
     { "place": "Punjabi bagh metro towards mundka", "lat": 28.672769, "lng": 77.147112 },
     { "place": "Shivaji park metro near Punjabi bagh police station towards mundka", "lat": 28.674587, "lng": 77.132125 },
     { "place": "Paschim vihar east metro station towards karolbagh", "lat": 28.677569, "lng": 77.111716 },
     
 
+
+    
 
     
     { "place": "Maharaja surajmal stadium metro station towards karolbagh", "lat": 28.68217, "lng": 77.074094 },
@@ -116,15 +124,14 @@ const MyMapComponent = compose(
     { "place": "Railway colony ashok vihar phase 3 towards azadpur", "lat": 28.686469, "lng": 77.178298 },
 
 
-  ]
-  let EL2 = [
-    
-
-
 
     
 
    
+
+  ]
+  let EL2 = [
+    
     
     
 
@@ -171,25 +178,20 @@ const MyMapComponent = compose(
     { "place": " INDRAPRASTHA TOWARDS RAJGHAT ( Ring Road /MG Road)", "lat": 28.602828, "lng": 77.255782 },
     { "place": "chattarpur opposite metro station facing gurgoan MG rd", "lat": 28.504102, "lng": 77.171702 },
     { "place": "Sultanpur metro station Near Delhi mohalla clinic Facing gurgoan MG rd.", "lat": 28.499535, "lng": 77.163101 },
-    { "place": "Sultanpur near bus stop Facing Delhi MG rd.", "lat": 28.498235, "lng": 77.15961 },
     { "place": "Chattarpur Near OICL pump facing delhi MG rd.", "lat": 28.503436, "lng": 77.172147 },
     { "place": "Jasola Infront of Apolo Hospital infront of District park Badarpur Rd", "lat": 28.639417, "lng": 77.283137 },
     { "place": "Jasola in between IGL and IOCL Noida Rd.", "lat": 28.538418, "lng": 77.289877 },
-    { "place": "Mohan cooperative infront of Volvo Ashram Rd.", "lat": 28.516536, "lng": 77.295676 },
     { "place": "Jasola infront of South delhi police housing resident Ashram Rd.", "lat": 28.5412, "lng": 77.280916 },
     { "place": "Nizamuddin infront of police station Indiagate Rd.", "lat": 28.592716, "lng": 77.248784 },
     { "place": "saket infront of District Court Malviye nagar Rd.", "lat": 28.6013, "lng": 77.026722 },
     { "place": "Community center Saket", "lat": 28.522814, "lng": 77.207268 },
     { "place": "Benito Juarez Marg, Nanak Pura South Moti Bagh Near- West End Colony(Road - 01)", "lat": 28.575595, "lng": 77.164117 },
     { "place": "North West Moti Bagh Near Moti bagh Metro station (road - 02)", "lat": 28.578038, "lng": 77.174545 },
-    { "place": "North West Moti Bagh Near SDMC Toilet (road - 02)", "lat": 28.572263, "lng": 77.16237 },
     { "place": "Sector-01 RK Puram near Muhamadpur Red Light (road - 03)", "lat": 28.564455, "lng": 77.180414 },
     { "place": "Sector-05 RK Puram Near SDMC Dalao (road - 03)", "lat": 28.559744, "lng": 77.174559 },
-    { "place": "Sector -02 RK Puram Near Rama Krishna puram society (road -04)", "lat": 28.558092, "lng": 77.186833 },
     { "place": "Sector -02 RK Puram Facing Rama Krishna puram  (road -04)", "lat": 28.556701, "lng": 77.186355 },
     { "place": "Sheikh Sarai Phase -02 sector 7  Near Sheikh Sarai Red light (road - 10)", "lat": 28.532793, "lng": 77.23197 },
     { "place": "Madangir village,near Phusp Vihar  (road- 10)", "lat": 28.52435, "lng": 77.230378 },
-    { "place": "Gurudwara Rd, Sector -03 , Near JJ Colony (road - 10)", "lat": 28.517744, "lng": 77.227274 },
     { "place": " Madangir Village  Opposite NCB Office (road-10)", "lat": 28.519733, "lng": 77.228062 },
     { "place": "Hauj Khas Near Metro Station", "lat": 28.543756, "lng": 77.204659 },
     { "place": "Mayfair Gardens Near The Mother internation School (road-09)", "lat": 28.544053, "lng": 77.204494 },
@@ -201,7 +203,6 @@ const MyMapComponent = compose(
     { "place": "Hauj Khas Near Post office (road-05)", "lat": 28.540061, "lng": 77.198875 },
     { "place": "Ghitorni Metro station Facing Gurgoan MG Rd.", "lat": 28.49329, "lng": 77.14833 },
     { "place": "Arjangarh metro Station facing Delhi MG Rd.", "lat": 28.48074, "lng": 77.12546 },
-    { "place": "Govindpuri metro Kalkaji rd.", "lat": 28.543076, "lng": 77.263604 },
     { "place": "Delhi metro housing Ali Extension Badarpur rd.", "lat": 28.52269, "lng": 77.294638 },
     { "place": "Hauj Rani near Malviya nagar metro", "lat": 28.529039, "lng": 77.214434 },
     { "place": "Josip Broz Tito Marg GK Enclave-01 Near Indian Oil petrol Pump (road - 07)", "lat": 28.547846, "lng": 77.228848 },
@@ -211,6 +212,11 @@ const MyMapComponent = compose(
     { "place": "Pashchim vihar facing janakpuri opp raddission blue hotel", "lat": 28.66676, "lng": 77.09275 },
     { "place": "State bank nagar paschim vihar facing janakpuri", "lat": 28.66052, "lng": 77.09167 },
     { "place": "Ndmc parking shivaji metro station towards karolbagh", "lat": 28.674947, "lng": 77.132351 },
+
+
+    { "place": "MAYA PURI TOWARDS PUNJABI BAGH", "lat": 28.637729, "lng": 77.129314 },
+    { "place": "NARAINA VIHAR TOWARDS PUNJABI BAGH", "lat": 28.615597, "lng": 77.136371 },
+    { "place": " Punjabi Bag Market (Punjabi bagh Central Market)", "lat": 28.670491, "lng": 77.133516 },
     
   ]
 
