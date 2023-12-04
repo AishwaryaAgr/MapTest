@@ -547,8 +547,10 @@ const MyMapComponent = compose(
       >
         {Locations.map((map, index) => {
           console.log(map);
-          return <Marker icon={{
-            url: marker2, scaledSize: new window.google.maps.Size(28, 32),
+          return <Marker  
+          style={{zIndex: 10000}}
+          icon={{
+            url: marker2, scaledSize: new window.google.maps.Size(37, 40),
             // origin: new window.google.maps.Point(0, 0),
             // anchor: new window.google.maps.Point(32,65),
             labelOrigin: new window.google.maps.Point(35, 25),
@@ -564,9 +566,9 @@ const MyMapComponent = compose(
                 : null}
           </Marker>;
         })}
-        {hub.map((map, index) => {
+        {Zomato.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(40, 40),
+                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(30, 30),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
