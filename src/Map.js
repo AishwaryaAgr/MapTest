@@ -12,9 +12,9 @@ const MyMapComponent = compose(
     // googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
     // googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-LLjEHUXavG3WqTGUB-DpXpEvh-eRhI&v=3.exp&libraries=geometry,drawing,places",
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAGP0yTwZ8BFM1U6vgZ292xZD3p_M13tSI&v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `200%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `200%` }} />,
+    loadingElement: <div style={{ height: `100%` }} />,
+    containerElement: <div style={{ height: `100vh` }} />,
+    mapElement: <div style={{ height: `100%` }} />,
   }),
   withScriptjs,
   withGoogleMap
@@ -494,6 +494,20 @@ const MyMapComponent = compose(
     { "place": "Sector 31", "lat": 28.45085, "lng": 77.04839 },
     { "place": "Sector 56, Gurgaon", "lat": 28.42733, "lng": 77.09811 }
   ]
+  let hub = [
+    {"lat": 28.45185,"lng": 77.04287}
+  ]
+
+  let Locations = [
+    {"lat": 28.47686, "lng": 77.08518},
+    {"lat":28.462719876100092,"lng": 77.0802879999971},
+    {"lat":28.41584,"lng": 77.09116},
+    {"lat":28.40578,"lng": 77.09110},
+    {"lat":28.40148,"lng": 77.06147},
+    {"lat":28.44818,"lng": 77.07311},
+    {"lat":28.44134, "lng": 77.08910},
+    {"lat":28.42659,"lng": 77.04637 }
+  ]
 
 
   useEffect(() => {
@@ -530,7 +544,7 @@ const MyMapComponent = compose(
         defaultZoom={12}
         defaultCenter={{ lat: 28.44983,lng: 77.00096 }}
       >
-        {Zomato.map((map, index) => {
+        {Locations.map((map, index) => {
           console.log(map);
           return <Marker icon={{
             url: marker2, scaledSize: new window.google.maps.Size(28, 32),
@@ -549,9 +563,9 @@ const MyMapComponent = compose(
                 : null}
           </Marker>;
         })}
-        {/* {Blinkit.map((map, index) => {
+        {hub.map((map, index) => {
                     console.log(map);
-                    return <Marker icon={{url: marker3, scaledSize: new window.google.maps.Size(25, 40),
+                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(40, 40),
                       // origin: new window.google.maps.Point(0, 0),
                       // anchor: new window.google.maps.Point(32,65),
                       labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Becil"+index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
@@ -566,23 +580,7 @@ const MyMapComponent = compose(
                     : null }
                     </Marker>;
                 })}
-                {others.map((map, index) => {
-                    console.log(map);
-                    return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(60, 60),
-                      // origin: new window.google.maps.Point(0, 0),
-                      // anchor: new window.google.maps.Point(32,65),
-                      labelOrigin:  new window.google.maps.Point(35,25),}} onClick={()=>setLocation("Others"+index)}  position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
-                      
-                      {
-                        location ==  `Others${index}` ? 
-                      <InfoWindow>
-                        <div>
-                           {map.place}
-                        </div>
-                      </InfoWindow>
-                    : null }
-                    </Marker>;
-                })} */}
+                
       </GoogleMap>
     </div>
   )
