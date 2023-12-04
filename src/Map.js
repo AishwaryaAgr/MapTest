@@ -3,8 +3,8 @@ import { compose, withProps } from "recompose"
 import React, { useState, useEffect } from 'react'
 import marker from "./marker.png";
 import marker2 from "./marker2.png";
-import marker3 from "./Mapmarkers03.png"
-import marker4 from "./Mapmarkers04.png"
+import marker3 from "./Map Marker.png"
+import marker4 from "./Mapmarkers02.png"
 
 const MyMapComponent = compose(
   withProps({
@@ -219,6 +219,107 @@ const MyMapComponent = compose(
     { "place": " Punjabi Bag Market (Punjabi bagh Central Market)", "lat": 28.670491, "lng": 77.133516 },
     
   ]
+
+  const currStations = [
+    {"lat":28.5288833,"lng":77.2146648}, //Max
+{"lat":28.5288833,"lng":77.2126648},// Max
+{"lat":28.5006596,"lng":77.2341272},
+{"lat":28.5363767,"lng":77.20773}, //Malviya
+{"lat":28.569234,"lng":77.219661},
+{"lat":28.5288833,"lng":77.2136648}, //Max
+{"lat":28.517918,"lng":77.198375}, //Office
+{"lat":28.5011772,"lng":77.1843089},
+{"lat":28.5647828,"lng":77.2416165},
+{"lat":28.55743,"lng":77.1642252}, //Vasant Vihar
+{"lat":28.566648,"lng":77.2297322},
+{"lat":28.5363767,"lng":77.20813}, //Malviya
+{"lat":28.5363767,"lng":77.20893},//Malviya
+{"lat":28.540413,"lng":77.2350566},
+{"lat":28.541655,"lng":77.232924},
+{"lat":28.5441,"lng":77.2046},
+{"lat":28.5441,"lng":77.2040},// Hauz Khas
+{"lat":28.5472912,"lng":77.2530695},
+{"lat":28.5694003,"lng":77.2043605},
+{"lat":28.5363767,"lng":77.20993}, //Malviya
+{"lat":28.55743,"lng":77.1632252},
+{"lat":28.524153,"lng":77.154968},
+{"lat":28.57268,"lng":77.174016},
+{"lat":28.589669,"lng":77.168967},
+{"lat":28.517918,"lng":77.197375}, //Office
+{"lat":28.5365,"lng":77.2266},
+{"lat":28.524153,"lng":77.155968}, // vasant Kunj
+{"lat":28.5006596,"lng":77.2351272}, // Sangam Vihar
+{"lat":28.5693271,"lng":77.1851651},
+{"lat":28.5011981,"lng":77.1853049}, // Chattarpur
+{"lat":28.5179572,"lng":77.1994123},
+{"lat":28.5654306,"lng":77.2428684},
+{"lat":28.5446013,"lng":77.2469289},
+{"lat":28.517918,"lng":77.196375}, //Office
+{"lat":28.569078,"lng":77.219318}
+  ]
+
+let extra = [
+  {"lat": 28.695243, "lng": 77.125234},
+  {"lat":28.722710, "lng":77.157184},
+  {"lat":28.721266, "lng": 77.188821},
+  {"lat": 28.707964, "lng": 77.225064},
+  {"lat":28.667797, "lng": 77.174654},
+  {"lat":28.667794, "lng": 77.214506},
+  {"lat":28.650167, "lng": 77.20231},
+  {"lat": 28.657104219901278, "lng": 77.23237354541936},
+
+
+  {"lat": 28.694300011700868, "lng": 77.2639690210582},
+  {"lat": 28.69147992797314, "lng": 77.28810358561223},
+  {"lat": 28.681519115274657, "lng": 77.30466813078381},
+  {"lat":28.680263389079865, "lng": 77.27587866064667},
+  // {"lat":28.677193184976822, "lng": 77.29012342746924},
+  // {"lat":28.674114682614462, "lng":77.31280095888857},
+  // {"lat":28.68052521954813, "lng": 77.26366671090746},
+  {"lat":28.670069507413345, "lng": 77.25842504554794},
+  {"lat":28.666237216261127, "lng": 77.27005088366484},
+  {"lat":28.661904141853263, "lng": 77.26423294858387},
+  // {"lat":28.664188369541378, "lng" : 77.2834223802438},
+  // {"lat": 28.656799122069398, "lng": 77.27062408060655},
+  // {"lat": 28.655773860769347, "lng": 77.27876269530654},
+  // {"lat":28.657549828817693, "lng": 77.29271860628589},
+  // {"lat": 28.66290372901245, "lng": 77.29650409168605},
+  {"lat":28.65958361474555, "lng": 77.30173352364802},
+  {"lat": 28.64710399909673, "lng": 77.27468510156156},
+  {"lat": 28.644821769790905, "lng": 77.24968684535463},
+  {"lat": 28.6460728985802, "lng": 77.29067136422897},
+  // {"lat": 28.644816392215414, "lng": 77.26073146687074},
+  // {"lat":28.649118774934454, "lng":77.30957038270806},
+  // {"lat": 28.640964736496844, "lng": 77.29938624562156},
+  {"lat":28.630257180118722, "lng":77.29239875082531},
+  {"lat": 28.632559792455552, "lng": 77.28280996244833},
+  {"lat": 28.613689550908433, "lng": 77.27610888089876},
+  {"lat":28.608839934956503, "lng":77.28104435819087},
+  {"lat":28.6228331586081, "lng":77.32290815225572},
+  // {"lat": 28.620048094805746, "lng": 77.30023483978862},
+  // {"lat":28.612659485580107, "lng":77.28976533427694},
+  // {"lat": 28.609081761100587, "lng": 77.29818874061712},
+  // {"lat":28.595830520584613, "lng":77.28248545180408},
+  {"lat":28.61058360868594, "lng":77.32841404895643},
+  {"lat":28.622576915269764, "lng":77.32407045204816},
+  {"lat":28.612894696549052, "lng": 77.31301383812058},
+  {"lat": 28.60244436891469, "lng": 77.30457437265136},
+  {"lat": 28.59403329177645, "lng": 77.29730132092496},
+
+  {"lat": 28.690932850028528, "lng":77.0417663392243},
+  {"lat":28.66897807119772, "lng":77.02086215283978},
+  {"lat": 28.67129741557869, "lng": 77.04557265486369},
+  {"lat":28.64577858162517, "lng": 77.02019949784755},
+  {"lat":28.656267894865568, "lng": 77.05710218620194},
+  {"lat": 28.645032198125143, "lng": 77.04967531840325},
+
+  {"lat": 28.62330866838649, "lng": 77.00037579967523},
+  {"lat": 28.624044518757234, "lng": 76.97828342380217},
+  {"lat": 28.606950930027224, "lng": 76.97511588432708},
+  {"lat": 28.59598873937465, "lng": 76.97891284678913},
+  {"lat":28.59500387127215, "lng":77.00477723430608},
+  {"lat": 28.582475702348916, "lng": 76.98271269020802}
+]
 
   const myStyles = [
     {
@@ -499,13 +600,13 @@ const MyMapComponent = compose(
     <div style={{}}>
       <GoogleMap
         defaultZoom={12}
-        defaultCenter={{ "lat": 28.601594, "lng": 77.150424 }}  
+        defaultCenter={{"lat":28.5363767,"lng":77.20973}}  
         defaultOptions={{ styles: myStyles }}
       >
         {Electriva.map((map, index) => {
           console.log(map);
           return <Marker zIndex={100} icon={{
-            url: marker4, scaledSize: new window.google.maps.Size(40, 52),
+            url: marker3, scaledSize: new window.google.maps.Size(18, 25),
             labelOrigin: new window.google.maps.Point(35, 25),
           }} onClick={() => setLocation("MCD" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             { 
@@ -522,7 +623,7 @@ const MyMapComponent = compose(
         {EL2.map((map, index) => {
           console.log(map);
           return <Marker zIndex={2} icon={{
-            url: marker3, scaledSize: new window.google.maps.Size(40, 52),
+            url: marker3, scaledSize: new window.google.maps.Size(18, 25),
             labelOrigin: new window.google.maps.Point(35, 25),
           }} onClick={() => setLocation("MCD" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             {
@@ -536,7 +637,40 @@ const MyMapComponent = compose(
                 : null}
           </Marker>;
         })}
-      
+        {currStations.map((map, index) => {
+          console.log(map);
+          return <Marker zIndex={2} icon={{
+            url: marker3, scaledSize: new window.google.maps.Size(18, 25),
+            labelOrigin: new window.google.maps.Point(35, 25),
+          }} onClick={() => setLocation("MCD" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+            {
+              location == `MCD${index}` ?
+
+                <InfoWindow>
+                  <div>
+                    {map.place}
+                  </div>
+                </InfoWindow>
+                : null}
+          </Marker>;
+        })}
+        {extra.map((map, index) => {
+          console.log(map);
+          return <Marker zIndex={2} icon={{
+            url: marker3, scaledSize: new window.google.maps.Size(18, 25),
+            labelOrigin: new window.google.maps.Point(35, 25),
+          }} onClick={() => setLocation("MCD" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+            {
+              location == `MCD${index}` ?
+
+                <InfoWindow>
+                  <div>
+                    {map.place}
+                  </div>
+                </InfoWindow>
+                : null}
+          </Marker>;
+        })}
       </GoogleMap>
     </div>
   )
