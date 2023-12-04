@@ -495,7 +495,7 @@ const MyMapComponent = compose(
     { "place": "Sector 56, Gurgaon", "lat": 28.42733, "lng": 77.09811 }
   ]
   let hub = [
-    {"lat": 28.45185,"lng": 77.04287}
+    
   ]
 
   let Locations = [
@@ -506,7 +506,8 @@ const MyMapComponent = compose(
     {"lat":28.40148,"lng": 77.06147},
     {"lat":28.44818,"lng": 77.07311},
     {"lat":28.44134, "lng": 77.08910},
-    {"lat":28.42659,"lng": 77.04637 }
+    {"lat":28.42659,"lng": 77.04637 },
+    {"lat": 28.45185,"lng": 77.04287}
   ]
 
 
