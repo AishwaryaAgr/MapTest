@@ -495,21 +495,290 @@ const MyMapComponent = compose(
     { "place": "Sector 56, Gurgaon", "lat": 28.42733, "lng": 77.09811 }
   ]
   let hub = [
-    
+    {"lat":28.512871083342556,"lng": 76.98965679466099},
+    // {"lat":28.506535590041565, "lng": 77.0833839064799},
+    {"lat":28.50804407534139, "lng": 77.08166729271034},
+    {"lat":28.489337333243007, "lng": 77.05523144065884},
+    {"lat": 28.47485241723225, "lng": 77.03257213890042},
+    {"lat": 28.46821283347877, "lng": 76.99926983177063},
+    {"lat":28.510457606953906, "lng": 77.03772198020914},
+    {"lat": 28.458554512319033, "lng": 76.9697440749339},
+    // {"lat":28.39454585275365, "lng":76.95120464622245},
+    // {"lat": 28.41145756198129,"lng": 76.9275153762023},
+    // {"lat": 28.38186029966025, "lng": 76.90142284690471},
+    {"lat": 28.46549651986603, "lng": 77.05763469993624},
+    {"lat": 28.442857858224755, "lng": 77.03909527122482},
+    {"lat": 28.44044278157142, "lng": 77.06381450950673},
+    {"lat": 28.435612462859396, "lng": 77.10295330345308},
+    {"lat": 28.410249672275427, "lng": 77.06621776878413},
+    {"lat": 28.52252443659806, "lng": 77.02192913352904},
+    {"lat": 28.50261342731664, "lng": 76.98725353538359},
+    {"lat": 28.44678224018359, "lng": 76.99549328147755},
+    {"lat": 28.49325998939122, "lng": 77.01437603294289}
   ]
 
   let Locations = [
-    {"lat": 28.47686, "lng": 77.08518},
-    {"lat":28.462719876100092,"lng": 77.0802879999971},
-    {"lat":28.41584,"lng": 77.09116},
-    {"lat":28.40578,"lng": 77.09110},
-    {"lat":28.40148,"lng": 77.06147},
-    {"lat":28.44818,"lng": 77.07311},
-    {"lat":28.44134, "lng": 77.08910},
-    {"lat":28.42659,"lng": 77.04637 },
-    {"lat": 28.45185,"lng": 77.04287}
+    {"place": 1,"lat": 28.47686, "lng": 77.08518},
+    {"place": 2,"lat":28.462719876100092,"lng": 77.0802879999971},
+    // {"place": 3,"lat":28.41584,"lng": 77.09116},
+    // {"place": 4,"lat":28.40578,"lng": 77.09110},
+    // {"place": 5,"lat":28.40148,"lng": 77.06147},
+    // {"place": 6,"lat":28.44818,"lng": 77.07311},
+    // {"place": 7,"lat":28.44134, "lng": 77.08910},
+    {"place": 8,"lat":28.42659,"lng": 77.04637 },
+    {"place": 9,"lat": 28.45185,"lng": 77.04287},
+    {"lat": 28.44400807967219,"lng": 77.07265509195881},
+    {"lat":28.397206666099986,"lng": 77.04948080606958},
+    {"lat":28.40562961592259,"lng": 77.0913071734487},
+    {"lat":28.431009634550463,"lng": 77.08613977632363}
   ]
 
+  const myStyles = [
+    {
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#f5f5f5"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#616161"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        {
+          "color": "#f5f5f5"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.land_parcel",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#bdbdbd"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.neighborhood",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#eeeeee"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#757575"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.business",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e5e5e5"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#ffffff"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#757575"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#dadada"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#616161"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e5e5e5"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.station",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#eeeeee"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#c9c9c9"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    }
+  ]
 
   useEffect(() => {
     fetch(`https://os0ylhupva.execute-api.ap-south-1.amazonaws.com/default/GetLocation`)
@@ -543,7 +812,8 @@ const MyMapComponent = compose(
     <div style={{}}>
       <GoogleMap
         defaultZoom={12}
-        defaultCenter={{ lat: 28.44983,lng: 77.00096 }}
+        defaultCenter={{ "lat": 28.45185,"lng": 77.04287 }}
+        defaultOptions={{ styles: myStyles }}
       >
         {Locations.map((map, index) => {
           console.log(map);
@@ -566,7 +836,7 @@ const MyMapComponent = compose(
                 : null}
           </Marker>;
         })}
-        {Zomato.map((map, index) => {
+        {hub.map((map, index) => {
                     console.log(map);
                     return <Marker icon={{url: marker, scaledSize: new window.google.maps.Size(30, 30),
                       // origin: new window.google.maps.Point(0, 0),
