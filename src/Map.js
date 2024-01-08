@@ -21,7 +21,7 @@ const MyMapComponent = compose(
 )(() => {
 
   const [liveMarkers, setLiveMarkers] = useState([])
-  const [location, setLocation] = useState()
+  const [location, setLocation] = useState("my")
 
   let final = [
     {"place":"6","lat": 28.44887,"lng":77.07144},
@@ -482,19 +482,14 @@ const MyMapComponent = compose(
 ]
 
   let Locations = [
-    {"place": 1,"lat": 28.47686, "lng": 77.08518},
-    {"place": 2,"lat":28.462719876100092,"lng": 77.0802879999971},
-    // {"place": 3,"lat":28.41584,"lng": 77.09116},
-    // {"place": 4,"lat":28.40578,"lng": 77.09110},
-    // {"place": 5,"lat":28.40148,"lng": 77.06147},
-    // {"place": 6,"lat":28.44818,"lng": 77.07311},
-    // {"place": 7,"lat":28.44134, "lng": 77.08910},
-    {"place": 8,"lat":28.42659,"lng": 77.04637 },
-    {"place": 9,"lat": 28.45185,"lng": 77.04287},
-    {"lat": 28.44400807967219,"lng": 77.07265509195881},
-    {"lat":28.397206666099986,"lng": 77.04948080606958},
-    {"lat":28.40562961592259,"lng": 77.0913071734487},
-    {"lat":28.431009634550463,"lng": 77.08613977632363}
+    {"place": "A","lat": 28.47686, "lng": 77.08518},
+    {"place": "B","lat":28.462719876100092,"lng": 77.0802879999971},
+    {"place": "C","lat":28.42659,"lng": 77.04637 },
+    {"place": "D","lat": 28.45185,"lng": 77.04287},
+    {"place": "E","lat": 28.44400807967219,"lng": 77.07265509195881},
+    {"place": "F","lat":28.397206666099986,"lng": 77.04948080606958},
+    {"place": "G","lat":28.40562961592259,"lng": 77.0913071734487},
+    {"place": "H","lat":28.431009634550463,"lng": 77.08613977632363}
   ]
 
   const myStyles = [
@@ -753,7 +748,6 @@ const MyMapComponent = compose(
           // console.log(body.GPS_LIVE);
           body.GPS_LIVE.map(data => {
             let point = { lat: data.lat, lng: data.lng }
-            console.log(point)
             let newArr = liveMarkers;
             newArr.push(point)
             return setLiveMarkers(newArr)
@@ -776,22 +770,23 @@ const MyMapComponent = compose(
     <div style={{}}>
       <GoogleMap
         defaultZoom={12}
+        defaultCenter={{ "lat":28.462719876100092,"lng": 77.0802879999971 }}
         // defaultCenter={{ "lat":28.462719876100092,"lng": 77.0802879999971 }}
-        defaultCenter={{ "lat": 28.45185,"lng": 77.04287 }}
         defaultOptions={{ styles: myStyles }}
       >
         {z2.map((map, index) => {
-          console.log(map);
           return <Marker  
-          style={{zIndex: 10000}}
+          key = {"x"+index}
+          // zIndex={1000000}
           icon={{
             url: marker3, scaledSize: new window.google.maps.Size(20, 30),
             // origin: new window.google.maps.Point(0, 0),
             // anchor: new window.google.maps.Point(32,65),
             labelOrigin: new window.google.maps.Point(35, 25),
-          }} onClick={() => setLocation("Zomato" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+          }} onClick={() => setLocation("Zomato1" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             {
-              location == false ?
+              // location == false ?
+              location == `Zomato1${index}` ?
 
                 <InfoWindow>
                   <div>
@@ -799,20 +794,21 @@ const MyMapComponent = compose(
                   </div>
                 </InfoWindow>
                 : null}
-          </Marker>;
+          </Marker>
         })}
         {final.map((map, index) => {
-          console.log(map);
           return <Marker  
-          zIndex={10000}
+          key = {"y"+index}
+          // zIndex={1000000}
           icon={{
             url: marker2, scaledSize: new window.google.maps.Size(20, 30),
             // origin: new window.google.maps.Point(0, 0),
             // anchor: new window.google.maps.Point(32,65),
             labelOrigin: new window.google.maps.Point(35, 25),
-          }} onClick={() => setLocation("Zomato" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+          }} onClick={() => {setLocation("Zomato2" + index); console.log(map.place)}} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             {
-              location == `Zomato${index}` ?
+              // location == false ?
+              location == `Zomato2${index}` ?
 
                 <InfoWindow>
                   <div>
@@ -823,17 +819,18 @@ const MyMapComponent = compose(
           </Marker>;
         })}
         {Locations.map((map, index) => {
-          console.log(map);
           return <Marker  
-          zIndex={1000000}
+          key = {"z"+index}
+          // zIndex={1000000}
           icon={{
             url: marker, scaledSize: new window.google.maps.Size(20, 30),
             // origin: new window.google.maps.Point(0, 0),
             // anchor: new window.google.maps.Point(32,65),
             labelOrigin: new window.google.maps.Point(35, 25),
-          }} onClick={() => setLocation("Zomato" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
+          }} onClick={() => setLocation("Zomato3" + index)} position={{ lat: Number(map.lat), lng: Number(map.lng) }} >
             {
-              location == `Zomato${index}` ?
+              // location == false ?
+              location == `my` ?
 
                 <InfoWindow>
                   <div>
